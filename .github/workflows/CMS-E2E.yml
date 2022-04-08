@@ -1,0 +1,26 @@
+name: CMS | Cypress E2E Tests
+
+on: [push]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome87-ff82
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          # Specify Browser since container image is compile with Firefox
+          start: npm run test
+          # Load the application and website. "test" refers to package.json
+          wait-on-timeout: 300
+          command: npm run cy_ci
+          # Run Cypress tests
+          record: true
+          parallel: true
+          browser: chrome
