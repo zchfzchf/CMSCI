@@ -1,6 +1,6 @@
 describe("Login Page works as intended", () => {
-    beforeEach("Define Aliases",() => {
-        cy.visit("https://cms-lyart.vercel.app/login");
+    beforeEach("Define Aliases", () => {
+        cy.visit("http://localhost:3000/login");
 
         cy.get("#login_role>:nth-child(1)").as("student")
             .get("#login_role>:nth-child(2)").as("teacher")
@@ -20,7 +20,7 @@ describe("Login Page works as intended", () => {
     it("ID01: Proper default settings: Student and Remember me", () => {
         cy.get('@student').find('[type="radio"]')
             .should('be.checked')
-            .and('have.value','student')
+            .and('have.value', 'student')
 
         cy.get('@chkRMe').should('be.checked')
     })
@@ -30,7 +30,7 @@ describe("Login Page works as intended", () => {
 
         cy.contains("email' is required").should('have.length', 1)
             .and('be.visible')
-        
+
         cy.contains("'password' is required").should('have.length', 1)
             .and('be.visible')
     })
@@ -51,7 +51,7 @@ describe("Login Page works as intended", () => {
         cy.log("ID04-01: Valid Input")
         cy.get('@email').type('student@admin.com{enter}')
         cy.log("Message 'password' is required appears")
-        cy.get("div[role='alert'").contains("'password' is required").should('have.length',1)
+        cy.get("div[role='alert'").contains("'password' is required").should('have.length', 1)
         cy.get('@email').then($eml => {
             /*Cypress Way
             cy.wrap($eml.parent()).find('input:valid')
@@ -59,7 +59,7 @@ describe("Login Page works as intended", () => {
                 .and('have.value', 'student@admin.com')
             */
             //JS Way
-            const eml=$eml[0]
+            const eml = $eml[0]
             expect(eml.validity.valid).to.eql(true)
             expect(eml.value).to.eql('student@admin.com')
         })
@@ -87,7 +87,7 @@ describe("Login Page works as intended", () => {
                 .and('be.visible')
         })
 
-     })
+    })
 
     it("ID05: Password input validation without Account input", () => {
         cy.log("ID05-01: Password length is shorter than 4")
@@ -134,7 +134,7 @@ describe("Login Page works as intended", () => {
         cy.log("Click 'Sign in' Button, error messages appears")
         cy.get('@btn').click()
         cy.get("div[role='alert'").contains("'email' is required").should('have.length', 1)
-        
+
         cy.log("ID05-03: Valid Password input")
         cy.reload()
         cy.get('@pwd').type("123456{enter}")
@@ -155,7 +155,7 @@ describe("Login Page works as intended", () => {
         cy.get('@chkRMe').should('be.checked')
     })
 
-    it.skip("ID07: Login test with valid input", () => {
+    it.only("ID07: Login test with valid input", () => {
         cy.log("ID07-01: Non-existent Account")
         // Login failed: 1) pop-up alert, 2) stay at the same page
         cy.get('@email').type('abc@abc.com')
@@ -164,7 +164,7 @@ describe("Login Page works as intended", () => {
         cy.get('.ant-message').contains('Please check your password or email')
             .should('be.visible')
             .and('have.length', 1)
-        cy.url().should('eq','https://cms-lyart.vercel.app/login')
+        cy.url().should('eq', 'http://localhost:3000/login')
         // Actually, this is an inserted <span> by script. How to use the selector to find this element?
 
         cy.log("ID07-02: Correct Account, incorrect password")
@@ -175,7 +175,7 @@ describe("Login Page works as intended", () => {
         cy.get('.ant-message').contains('Please check your password or email')
             .should('be.visible')
             .and('have.length', 1)
-        cy.url().should('eq', 'https://cms-lyart.vercel.app/login')
+        cy.url().should('eq', 'http://localhost:3000/login')
 
         cy.log("ID07-03: Correct Account and password, incorrect Role")
         cy.reload()
@@ -186,21 +186,24 @@ describe("Login Page works as intended", () => {
         cy.get('.ant-message').contains('Please check your password or email')
             .should('be.visible')
             .and('have.length', 1)
-        cy.url().should('eq', 'https://cms-lyart.vercel.app/login')
+        cy.url().should('eq', 'http://localhost:3000/login')
 
         //Login successfully, new contents are loaded and URL is changed.
         cy.log("ID07-04: Correct Account and Password, correct Role")
         cy.reload()
         cy.get('@email').type('student@admin.com')
-        cy.get('@pwd').type('111111{enter}')
-        cy.url().should('contain', '/dashboard')
-        cy.get('span').contains('CMS').should('be.visible')
+        cy.get('@pwd').type('111111{enter}').then(() => {
+
+            cy.url().should('contain', '/dashboard');
+            cy.wait(1500);
+            cy.get('span').contains('CMS').should('be.visible');
+        });
     })
 
     // URL is changed, new contents are loaded.
     it("ID08: 'Sign up' link works", () => {
         cy.get('@signup').click()
-        cy.url().should('eq', 'https://cms-lyart.vercel.app/signup')
+        cy.url().should('eq', 'http://localhost:3000/signup')
         cy.get('h1').contains('Sign up your account').should('be.visible')
     })
 

@@ -1,6 +1,7 @@
 describe("ID 01: Heare is properly displaying with 5 links", () => {
     beforeEach(() => {
-        cy.visit('http://cms-lyart.vercel.app/');                         //Open the website
+        cy.visit("http://localhost:3000");
+        //cy.visit('http://localhost:3000');                         //Open the website
     })
     it("Verify Logo and 5 links in Header - SOLUTION 1", () => {
         //cy.get('#header')
@@ -45,14 +46,15 @@ describe("ID 01: Heare is properly displaying with 5 links", () => {
 
 describe("ID 02: Ensure the 5 links and Logo button are working", () => {
     beforeEach(() => {
-        cy.visit('http://cms-lyart.vercel.app/');                           // Open the website
+        cy.visit("http://localhost:3000");
+        //cy.visit('http://cms-lyart.vercel.app/');                              // Open the website
         })
 
     it("Ensure the 1st links COURSE and Logo button are working", () => {
         cy.get('#header #menu>ul:nth-child(1)>li:nth-child(1)>a').click()   // Click the link
         cy.url().should('include', '/events').then(() => {                  // New page link should include '/events'
             cy.get('#header #logo').click()                                 // Click the logo
-            cy.url().should('eql', 'https://cms-lyart.vercel.app/')         // Go back to the homepage
+            cy.url().should('eql', 'http://localhost:3000')         // Go back to the homepage
         })
     })
 
@@ -60,7 +62,7 @@ describe("ID 02: Ensure the 5 links and Logo button are working", () => {
         cy.get('#header #menu>ul:nth-child(1)>li:nth-child(2)>a').click()    // Click the link
         cy.url().should('include', '/events').then(() => {                   // New page link should include '/events'
             cy.get('#header #logo').click()                                  // Click the logo
-            cy.url().should('eql', 'https://cms-lyart.vercel.app/')          // Go back to the homepage
+            cy.url().should('eql', 'http://localhost:3000')          // Go back to the homepage
         })
     })
 
@@ -68,7 +70,7 @@ describe("ID 02: Ensure the 5 links and Logo button are working", () => {
         cy.get('#header #menu>ul:nth-child(2)>li:nth-child(1)>a').click()    // Click the link
         cy.url().should('include', '/gallery').then(() => {                  // New page link should include '/gallery'
             cy.get('#header #logo').click()                                  // Click the logo
-            cy.url().should('eql', 'https://cms-lyart.vercel.app/')          // Go back to the homepage
+            cy.url().should('eql', 'http://localhost:3000')          // Go back to the homepage
         })
     })
 
@@ -76,7 +78,7 @@ describe("ID 02: Ensure the 5 links and Logo button are working", () => {
         cy.get('#header #menu>ul:nth-child(2)>li:nth-child(2)>a').click()    // Click the link
         cy.url().should('include', '/gallery').then(() => {                  // New page link should include '/gallery'
             cy.get('#header #logo').click()                                  // Click the logo
-            cy.url().should('eql', 'https://cms-lyart.vercel.app/')          // Go back to the homepage
+            cy.url().should('eql', 'http://localhost:3000')          // Go back to the homepage
         })
     })
 
@@ -84,14 +86,14 @@ describe("ID 02: Ensure the 5 links and Logo button are working", () => {
         cy.get('#header #menu>ul:nth-child(2)>li:nth-child(3)>a').click()    // Click the link
         cy.url().should('include', '/login').then(() => {                    // New page link should include '/login'
             cy.get('#header #logo').click()                                  // Click the logo
-            cy.url().should('eql', 'https://cms-lyart.vercel.app/')          // Go back to the homepage
+            cy.url().should('eql', 'http://localhost:3000')          // Go back to the homepage
         })
     })
 })
 
 describe('ID 03: The header is always on the top', () => {
     it('The header is always on the top', () => {
-        cy.visit('http://cms-lyart.vercel.app/');                           // Open the website
+        cy.visit('http://localhost:3000');                           // Open the website
 
         cy.scrollTo('bottom')                                               // Scroll to the bottom
 
@@ -109,7 +111,7 @@ describe('ID 03: The header is always on the top', () => {
     })
 
     it.only('The header is always on the top', () => {
-        cy.visit('http://cms-lyart.vercel.app/');                           // Open the website
+        cy.visit('http://localhost:3000');                           // Open the website
 
         cy.scrollTo('bottom')                                               // Scroll to the bottom
 
@@ -140,7 +142,7 @@ describe('ID 03: The header is always on the top', () => {
 
 describe('ID 04: Login', () => {
     it('Type e-mail and password to login', () => {
-        cy.visit('http://cms-lyart.vercel.app/');                                   // Open the website
+        cy.visit('http://localhost:3000');                                   // Open the website
         cy.get('#header #menu>ul:nth-last-child(1)>li:nth-last-child(1)').click()   // Open the SIGN IN link
         cy.contains('span', 'Manager').click()                                      // Choose Manager account
         cy.get('input[type = "email"]').type('manager@admin.com')                   // Enter account

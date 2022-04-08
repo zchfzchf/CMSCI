@@ -1,0 +1,40 @@
+{
+    "data": {
+        "name": "BB88",
+        "uid": "2d004333-e24e-49ab-b152-2a70c2cff46e",
+        "startTime": "2022-04-05",
+        "price": 8,
+        "maxStudents": 8,
+        "duration": 6,
+        "detail": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBB",
+        "durationUnit": 2,
+        "type": [
+            {
+                "id": 1,
+                "name": "C"
+            },
+            {
+                "id": 3,
+                "name": "C++"
+            },
+            {
+                "id": 5,
+                "name": "Visual Basic"
+            },
+            {
+                "id": 7,
+                "name": "R"
+            }
+        ],
+        "scheduleId": 1830,
+        "teacherId": 77,
+        "createdAt": "2022-04-04 08:41:31",
+        "updatedAt": "2022-04-04 08:41:31",
+        "id": 1516,
+        "cover": "http://lorempixel.com/800/600/technics/",
+        "star": 0,
+        "teacherName": "Fanny Haag"
+    },
+    "code": 201,
+    "msg": "success"
+}

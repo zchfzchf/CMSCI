@@ -2,11 +2,12 @@ describe("Add Course - Manager", () => {
     before(() => {
 
         cy.tLogin("manager", "manager@admin.com", "111111", true);
-        cy.visit("https://cms-lyart.vercel.app/dashboard/manager");
+        cy.visit("http://localhost:3000/dashboard/manager");
 
         cy.get("li").eq(3).as("Course").click();
         cy.get("@Course").within(() => {
             cy.get("ul>li:nth-child(2)").click();
+            cy.wait(3000);
         });
     });
 

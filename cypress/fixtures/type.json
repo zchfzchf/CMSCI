@@ -1,0 +1,30 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "INC_C"
+        },
+        {
+            "id": 2,
+            "name": "INC_Python"
+        },
+        {
+            "id": 3,
+            "name": "INC_C++"
+        },
+        {
+            "id": 4,
+            "name": "INC_C#"
+        },
+        {
+            "id": 5,
+            "name": "INC_Visual Basic"
+        },
+        {
+            "id": 6,
+            "name": "INC_PHP"
+        }
+    ],
+    "code": 200,
+    "msg": "success"
+}

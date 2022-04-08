@@ -1,0 +1,181 @@
+{
+    "data": {
+        "total": 8,
+        "teachers": [
+            {
+                "createdAt": "1987-07-22 12:00:00",
+                "updatedAt": "2021-01-09 09:02:26",
+                "id": 27,
+                "country": "Antarctica (the territory South of 60 deg S)",
+                "courseAmount": 5,
+                "email": "jjaskolski@example.net",
+                "name": "Reagan Farrell",
+                "phone": "076.703.9775x233",
+                "profileId": 27,
+                "skills": [
+                    {
+                        "name": "Julia",
+                        "level": 3
+                    },
+                    {
+                        "name": "Python",
+                        "level": 3
+                    }
+                ]
+            },
+            {
+                "createdAt": "2006-06-27 12:00:00",
+                "updatedAt": "2021-01-09 09:02:26",
+                "id": 52,
+                "country": "Netherlands Antilles",
+                "courseAmount": 4,
+                "email": "hhilll@example.net",
+                "name": "Dr. Bernadine Fay",
+                "phone": "05370770527",
+                "profileId": 52,
+                "skills": [
+                    {
+                        "name": "Groovy",
+                        "level": 1
+                    },
+                    {
+                        "name": "Objective-C",
+                        "level": 5
+                    }
+                ]
+            },
+            {
+                "createdAt": "1998-09-28 12:00:00",
+                "updatedAt": "2021-01-09 09:02:26",
+                "id": 75,
+                "country": "New Caledonia",
+                "courseAmount": 4,
+                "email": "terrell81@example.com",
+                "name": "Eldon Pfannerstill IV",
+                "phone": "(561)706-3129x305",
+                "profileId": 75,
+                "skills": [
+                    {
+                        "name": "C",
+                        "level": 5
+                    },
+                    {
+                        "name": "Objective-C",
+                        "level": 2
+                    }
+                ]
+            },
+            {
+                "createdAt": "1995-10-19 12:00:00",
+                "updatedAt": "2021-01-09 09:02:26",
+                "id": 77,
+                "country": "Hong Kong",
+                "courseAmount": 9,
+                "email": "cristopher65@example.org",
+                "name": "Fanny AAA",
+                "phone": "159-710-4639x01655",
+                "profileId": 77,
+                "skills": [
+                    {
+                        "name": "PHP",
+                        "level": 3
+                    },
+                    {
+                        "name": "Perl",
+                        "level": 5
+                    }
+                ]
+            },
+            {
+                "createdAt": "1989-06-21 12:00:00",
+                "updatedAt": "2021-01-09 09:02:26",
+                "id": 79,
+                "country": "Timor-Leste",
+                "courseAmount": 5,
+                "email": "tomasa.rowe@example.net",
+                "name": "Mafalda Eichmann",
+                "phone": "(049)269-5715",
+                "profileId": 79,
+                "skills": [
+                    {
+                        "name": "Groovy",
+                        "level": 1
+                    },
+                    {
+                        "name": "R",
+                        "level": 5
+                    }
+                ]
+            },
+            {
+                "createdAt": "2006-02-03 12:00:00",
+                "updatedAt": "2021-01-09 09:02:26",
+                "id": 103,
+                "country": "Western Sahara",
+                "courseAmount": 3,
+                "email": "conn.virginie@example.com",
+                "name": "Faye Schamberger",
+                "phone": "1-474-223-9599x908",
+                "profileId": 103,
+                "skills": [
+                    {
+                        "name": "PHP",
+                        "level": 1
+                    },
+                    {
+                        "name": "Assembly Language",
+                        "level": 5
+                    }
+                ]
+            },
+            {
+                "createdAt": "1970-03-07 12:00:00",
+                "updatedAt": "2021-01-09 09:02:26",
+                "id": 140,
+                "country": "Saudi Arabia",
+                "courseAmount": 3,
+                "email": "alan38@example.org",
+                "name": "Mustafa Howell III",
+                "phone": "866-772-5125x9144",
+                "profileId": 140,
+                "skills": [
+                    {
+                        "name": "Groovy",
+                        "level": 2
+                    },
+                    {
+                        "name": "Julia",
+                        "level": 5
+                    }
+                ]
+            },
+            {
+                "createdAt": "1996-05-29 12:00:00",
+                "updatedAt": "2021-01-09 09:02:26",
+                "id": 181,
+                "country": "Guinea",
+                "courseAmount": 6,
+                "email": "donnie.fisher@example.com",
+                "name": "Prof. Felix Pfannerstill III",
+                "phone": "+75(3)3893529208",
+                "profileId": 181,
+                "skills": [
+                    {
+                        "name": "Perl",
+                        "level": 1
+                    },
+                    {
+                        "name": "Perl",
+                        "level": 2
+                    }
+                ]
+            }
+        ],
+        "paginator": {
+            "page": null,
+            "limit": null
+        }
+    },
+    "code": 200,
+    "msg": "success"
+}

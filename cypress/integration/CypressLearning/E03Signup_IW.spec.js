@@ -1,6 +1,6 @@
 describe("'Sign Up' pages work as intended", () => {
     beforeEach(() => {
-        cy.visit('https://cms-lyart.vercel.app/signup')
+        cy.visit('http://localhost:3000/signup')
         cy.get('#signUp_email').as('email')
         cy.get("#signUp_password").as('pwd')
         cy.get('#signUp_confirmPassword').as('pwdConf')
@@ -178,13 +178,13 @@ describe("'Sign Up' pages work as intended", () => {
         // Pop-up message should be "Success"
         // Question: 'success' is displayed before the loading of login page is completed or after? How to judge and handle?
 
-        cy.url().should('eq','https://cms-lyart.vercel.app/login')
+        cy.url().should('eq','http://localhost:3000/login')
         cy.get('.ant-message').should('contain', 'success')
             .and('be.visible')
     })
 
     it("ID07: Use the 'Sign Up' account and password to login", () => {
-        cy.visit("https://cms-lyart.vercel.app/login");
+        cy.visit("http://localhost:3000/login");
 
         cy.wait(3000)
         cy.get("#login_role>:nth-child(2)").click()
@@ -218,7 +218,7 @@ describe("'Sign Up' pages work as intended", () => {
         // Pop-up message should be "Success"
         // Question: 'success' is displayed before the loading of login page is completed or after? How to judge and handle?
 
-        cy.url().should('eq', 'https://cms-lyart.vercel.app/login')
+        cy.url().should('eq', 'http://localhost:3000/login')
         cy.get('.ant-message').should('contain', 'success')
             .and('be.visible')
 
