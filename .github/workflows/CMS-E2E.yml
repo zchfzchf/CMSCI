@@ -16,9 +16,10 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           # Specify Browser since container image is compile with Firefox
-          start: npm run test
+          #start: npm run test
+          start: nmp run dev
           # Load the application and website. "test" refers to package.json
-          wait-on-timeout: 300
+          wait-on-timeout: 1500
           command: npm run cy_ci
           # Run Cypress tests
           record: true
