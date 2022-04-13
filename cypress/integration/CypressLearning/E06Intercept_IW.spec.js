@@ -104,6 +104,7 @@ describe("", { baseUrl: "http://cms.chtoma.com/" }, () => {
     it.only("ID03: Create Course - POST || Spy", () => {
         const Detail = 'A'.replace(100)
         // We can use the stub here. Use the data format as requirement in the document. Here, the response can be reference.
+        // The Token in create_course.json should be updated if the token is changed. Otherwise, the rest operation will fail.
         cy.intercept(
             "POST",
             "api/courses",
