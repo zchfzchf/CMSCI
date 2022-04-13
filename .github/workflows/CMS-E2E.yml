@@ -17,7 +17,7 @@ jobs:
         with:
           # Specify Browser since container image is compile with Firefox
           #start: npm run test
-          start: nmp run dev
+          start: npm run dev
           # Load the application and website. "test" refers to package.json
           wait-on-timeout: 1500
           command: npm run cy_ci
